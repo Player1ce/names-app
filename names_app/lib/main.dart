@@ -1,6 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() {
+// flutter_riverpod
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:names_app/firebase_options.dart';
+// import 'package:names_app/providers/go_router_provider.dart';
+import 'package:names_app/util/configure_firestore_cache.dart';
+
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await configureFirestoreCache();
+
   runApp(const MyApp());
 }
 
