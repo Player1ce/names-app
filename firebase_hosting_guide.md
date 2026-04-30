@@ -158,8 +158,8 @@ firebase functions:delete functionName
 ## Folder Structure
 
 ``` markdown
-xp_todo_app/                    ← root
-  xp_todo_app/                  ← Flutter project
+names_app/                    ← root
+  names_app/                  ← Flutter project
     firebase.json               ← hosting config (points to build/web)
     .firebaserc                 ← project ID
     build/
